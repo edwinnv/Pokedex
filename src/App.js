@@ -35,7 +35,7 @@ const App = () => {
  
   console.log(id);
   return (
-    <div className="App">  
+    <div className="App p-4">  
       <form onSubmit={handleSubmit}>
         <label>
         <div>POKESEARCH</div>
@@ -51,41 +51,41 @@ const App = () => {
       {pokemonData.map((data) => {
         return (
           <div className="container">
-            <img src={data.sprites["front_default"]} />
-            <div className="divTable">
-              <div className="divTableBody">
-              <div className="divTableRow">
-                  <div className="divTableCell">No</div>
-                  <div className="divTableCell">{data.id}</div>
-                </div>
+              <img src={data.sprites["front_default"]} />
+              <div className="divTable">
+                <div className="divTableBody">
                 <div className="divTableRow">
-                  <div className="divTableCell">Tipo</div>
-                  <div className="divTableCell">{pokemonType}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">Altura</div>
-                  <div className="divTableCell">
-                    {" "}
-                    {Math.round(data.height * 3.9)}"
+                    <div className="divTableCell">No</div>
+                    <div className="divTableCell">{data.id}</div>
                   </div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">Peso</div>
-                  <div className="divTableCell">
-                    {" "}
-                    {Math.round(data.weight / 4.3)} lbs
+                  <div className="divTableRow">
+                    <div className="divTableCell">Tipo</div>
+                    <div className="divTableCell">{pokemonType}</div>
                   </div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">Numero de batallas</div>
-                  <div className="divTableCell">{data.game_indices.length}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">About</div>
-                  <div className="divTableCell">{data.about}</div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">Altura</div>
+                    <div className="divTableCell">
+                      {" "}
+                      {Math.round(data.height * 3.9)}"
+                    </div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">Peso</div>
+                    <div className="divTableCell">
+                      {" "}
+                      {Math.round(data.weight / 4.3)} lbs
+                    </div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">Numero de batallas</div>
+                    <div className="divTableCell">{data.game_indices.length}</div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">About</div>
+                    <div className="divTableCell">{data.about}</div>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         );
       })}

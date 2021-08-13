@@ -1,6 +1,6 @@
 .App {
   background: #FFFFFF;
-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
  0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px
   rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -9,6 +9,10 @@ box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
 body {
   background-image: url("https://i.pinimg.com/originals/bc/ba/58/bcba5804de04af3116081c5578a2f082.jpg");
   background-size: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 /* DivTable.com */
