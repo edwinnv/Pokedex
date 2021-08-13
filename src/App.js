@@ -53,6 +53,7 @@ const App = () => {
         return (
           <div className="container">
               <img alt="Pokemon" src={data.sprites["front_default"]} />
+              <div className="">No.{data.id} {data.name}</div>
               <div className="divTable">
                 <div className="divTableBody">
                 <div className="divTableRow">
