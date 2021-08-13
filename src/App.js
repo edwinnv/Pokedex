@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
+  const [hp, sethp]= useState(" ");
   const [id, setid] = useState(" ");
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState("");
@@ -26,6 +27,7 @@ const App = () => {
       setPokemonType(res.data.types[0].type.name);
       setid(res.data.id);
       setPokemonData(toArray);
+      sethp(res.data.stats[0].base_stat);
       
     } catch (e) {
       console.log(e);
@@ -36,11 +38,9 @@ const App = () => {
  
   console.log(id);
   return (
-<<<<<<< Updated upstream
-    <div className="App p-4">  
-=======
+
+
     <div className="App p-4" >  
->>>>>>> Stashed changes
       <form onSubmit={handleSubmit}>
         <label>
         <div class="mb-3 fs-3 fw-semi">PokeSearch</div>
@@ -59,20 +59,14 @@ const App = () => {
               <img alt="Pokemon" src={data.sprites["front_default"]} />
               <div className="">No.{data.id} {data.name}</div>
               <div className="divTable">
-                <div className="divTableBody">
-                <div className="divTableRow">
-                    <div className="divTableCell">No</div>
-                    <div className="divTableCell">{data.id}</div>
-                  </div>
+                <div className="divTableBody">              
                   <div className="divTableRow">
                     <div className="divTableCell">Tipo</div>
                     <div className="divTableCell">{pokemonType}</div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">Altura</div>
-                    <div className="divTableCell">
-                      {" "}
-                      {Math.round(data.height * 3.9)}"
+                    <div className="divTableCell">HP</div>
+                    <div className="divTableCell"> {hp}                   
                     </div>
                   </div>
                   <div className="divTableRow">
@@ -86,14 +80,7 @@ const App = () => {
                     <div className="divTableCell">Numero de batallas</div>
                     <div className="divTableCell">{data.game_indices.length}</div>
                   </div>
-                </div>
-<<<<<<< Updated upstream
-=======
-                <div className="divTableRow">
-                  <div className="divTableCell">Numero de batallas</div>
-                  <div className="divTableCell">{data.game_indices.length}</div>
-                </div>           
->>>>>>> Stashed changes
+                </div>                     
               </div>
           </div>
         );
