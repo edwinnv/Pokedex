@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
   const [id, setid] = useState(" ");
@@ -79,11 +80,7 @@ const App = () => {
                 <div className="divTableRow">
                   <div className="divTableCell">Numero de batallas</div>
                   <div className="divTableCell">{data.game_indices.length}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">About</div>
-                  <div className="divTableCell">{data.about}</div>
-                </div>
+                </div>           
               </div>
             </div>
           </div>

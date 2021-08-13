@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 .App {
   background: #FFFFFF;
 box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
@@ -9,6 +10,7 @@ box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
 body {
   background-image: url("https://i.pinimg.com/originals/bc/ba/58/bcba5804de04af3116081c5578a2f082.jpg");
   background-size: 150%;
+  font-family: "Poppins";
 }
 
 /* DivTable.com */
