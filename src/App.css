@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Poppins" !important;
+  color:#414141 !important;
+}
+
 .App {
   background: #FFFFFF;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14),
  0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px
   rgba(0, 0, 0, 0.2);
   text-align: center;
-  justify-content: center;
-}
-body {
-  background-image: url("https://i.pinimg.com/originals/bc/ba/58/bcba5804de04af3116081c5578a2f082.jpg");
-  background-size: 150%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  border-radius: 5px;
 }
 
 /* DivTable.com */
@@ -61,6 +63,10 @@ body {
   
   
   justify-content: center;
+}
+
+.fw-semi{
+  font-weight: 600;
 }
 
 img {

@@ -39,7 +39,7 @@ const App = () => {
     <div className="App p-4">  
       <form onSubmit={handleSubmit}>
         <label>
-        <div>POKESEARCH</div>
+        <div class="mb-3 fs-3" >PokeSearch</div>
           <input
             type="text"
             onChange={handleChange}
@@ -52,7 +52,7 @@ const App = () => {
       {pokemonData.map((data) => {
         return (
           <div className="container">
-              <img src={data.sprites["front_default"]} />
+              <img alt="Pokemon" src={data.sprites["front_default"]} />
               <div className="divTable">
                 <div className="divTableBody">
                 <div className="divTableRow">
@@ -80,10 +80,6 @@ const App = () => {
                   <div className="divTableRow">
                     <div className="divTableCell">Numero de batallas</div>
                     <div className="divTableCell">{data.game_indices.length}</div>
-                  </div>
-                  <div className="divTableRow">
-                    <div className="divTableCell">About</div>
-                    <div className="divTableCell">{data.about}</div>
                   </div>
                 </div>
               </div>
