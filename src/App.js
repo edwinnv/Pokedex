@@ -36,7 +36,11 @@ const App = () => {
  
   console.log(id);
   return (
+<<<<<<< Updated upstream
     <div className="App p-4">  
+=======
+    <div className="App p-4" >  
+>>>>>>> Stashed changes
       <form onSubmit={handleSubmit}>
         <label>
         <div class="mb-3 fs-3 fw-semi">PokeSearch</div>
@@ -83,6 +87,13 @@ const App = () => {
                     <div className="divTableCell">{data.game_indices.length}</div>
                   </div>
                 </div>
+<<<<<<< Updated upstream
+=======
+                <div className="divTableRow">
+                  <div className="divTableCell">Numero de batallas</div>
+                  <div className="divTableCell">{data.game_indices.length}</div>
+                </div>           
+>>>>>>> Stashed changes
               </div>
           </div>
         );
