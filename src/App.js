@@ -7,7 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
   const [hp, sethp]= useState(" ");
+  const [attack, setattack]= useState(" ");
   const [id, setid] = useState(" ");
+  const [defense, setdefense]= useState(" ");
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState("");
 
@@ -28,6 +30,8 @@ const App = () => {
       setid(res.data.id);
       setPokemonData(toArray);
       sethp(res.data.stats[0].base_stat);
+      setattack(res.data.stats[1].base_stat);
+      setdefense(res.data.stats[2].base_stat);
       
     } catch (e) {
       console.log(e);
@@ -60,25 +64,24 @@ const App = () => {
               <div className="">No.{data.id} {data.name}</div>
               <div className="divTable">
                 <div className="divTableBody">              
-                  <div className="divTableRow">
+                  {/* <div className="divTableRow">
                     <div className="divTableCell">Tipo</div>
                     <div className="divTableCell">{pokemonType}</div>
-                  </div>
+                  </div> */}
                   <div className="divTableRow">
                     <div className="divTableCell">HP</div>
                     <div className="divTableCell"> {hp}                   
                     </div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">Peso</div>
-                    <div className="divTableCell">
-                      {" "}
-                      {Math.round(data.weight / 4.3)} lbs
+                    <div className="divTableCell">Attack</div>
+                    <div className="divTableCell"> {attack}
+                     
                     </div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">Numero de batallas</div>
-                    <div className="divTableCell">{data.game_indices.length}</div>
+                    <div className="divTableCell">Defense</div>
+                    <div className="divTableCell">{defense}</div>
                   </div>
                 </div>                     
               </div>
