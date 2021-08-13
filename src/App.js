@@ -39,7 +39,7 @@ const App = () => {
     <div className="App p-4">  
       <form onSubmit={handleSubmit}>
         <label>
-        <div class="mb-3 fs-3" >PokeSearch</div>
+        <div class="mb-3 fs-3 fw-semi">PokeSearch</div>
           <input
             type="text"
             onChange={handleChange}
