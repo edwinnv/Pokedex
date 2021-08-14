@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Margin, Padding } from 'styled-components-spacing';
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");

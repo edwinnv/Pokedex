@@ -11,7 +11,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^1.1.5",
-    "react-shave": "^1.0.1"
+    "react-shave": "^1.0.1",
+    "styled-components": "^3.4.10",
+    "styled-components-spacing": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
