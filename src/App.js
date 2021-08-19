@@ -12,7 +12,14 @@ const myinput = {
   bottom: "72.17%",
   fontsize: "6px",
   fontfamily: "Poppins",
-  fontstyle: "normal"
+  fontstyle: "normal",
+
+  boxsizing: "border-box",
+  size: "2rem",
+  width: "448px",
+  padding: "1rem",
+  display: "block",
+  margin: "2rem auto"
 }
 
 const mycard = {
@@ -22,7 +29,7 @@ const mycard = {
   right: "23.33%",
   top: "13.28%",
   bottom: "16.5%",
-  blend: "Pass through",
+  
 
   background: " #FFFFFF",
   boxshadow: "0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2)"
@@ -192,6 +199,27 @@ textalign: "right",
 color: "#5D5D5D"
 }
 
+const text1 = {
+  position: "absolute",
+left: "34.44%",
+right: "34.38%",
+top: "105.65%",
+bottom: "3.42%",
+
+fontfamily: "Open Sans",
+fontstyle: "normal",
+fontweight: "normal",
+fontsize: "18px",
+lineheight: "30px",
+/* identical to box height, or 167% */
+
+display: "flex",
+alignitems: "center",
+
+color: "#414141"
+
+}
+
 
 
 const App = () => {
@@ -255,6 +283,8 @@ const App = () => {
           <h1 style={pokeshearch}>PokeSearch</h1>
           <input
             type="text"
+            name= "ftext"
+            id= "ftext"
             style={myinput}
             onChange={handleChange}
             placeholder="Digite nombre Pokemon"
@@ -277,6 +307,7 @@ const App = () => {
             <h2 style = {stats1}> Stats </h2>
             <h4 style= {stats2}> Stats </h4>
             <h4 style = {value1}> Value</h4>
+            
            {/*  <div className="divTable">
               <div className="divTableBody">
                 <div className="divTableRow">
@@ -304,11 +335,15 @@ const App = () => {
                 </div>
               </div>
             </div>  */}
+            
           </div>
+        
         );
         
       })}
+      <label style={text1} >  Copyright © 2021, Guarapo Labs | All rights reserved. </label>
     </div>
+    
 
   );
 };
